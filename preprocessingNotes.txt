@@ -1,0 +1,5 @@
+Some participants (such as admysore) have only a handfull of answers, sometimes as low as 8.
+
+Other participants (such as ms115) have twice the expected .json files, which results in problematic merging.
+
+Vafandal had a folder in each directory. one had 3 raw_sis json files and the other had 4 raw_sis json files
