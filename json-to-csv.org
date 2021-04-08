@@ -4,10 +4,9 @@
 	# Install json2csv
 	npm install -g json2csv
 
+	#NOTE: run the following two scripts from the main directory (such that it can find mudviz/*/*.csv and plain/*/*.csv)
+
 	# Convert JSON to CSV format
 	for i in `find . -name \*.json`; do echo $i; j=$(basename $i | sed -e 's/.json//g'); echo $j; k=$(dirname $i); json2csv -i $i -o $k/$j.csv; done
-
-	# combine every users csv's into a single file within their folder structure under username.csv
-	for i in `find . -mindepth 2 -maxdepth 2 -type d`; do cd $i; paste -d, *.csv > `basename $i`.csv; cd ../..; done
 
 echo "Done!"
